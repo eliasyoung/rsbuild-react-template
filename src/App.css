@@ -1,7 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Source Serif 4 Variable", "sans-serif";
+}
+
 body {
   margin: 0;
   color: #fff;
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Inter Variable", Inter, Avenir, Helvetica, Arial sans-serif;
   background-image: linear-gradient(to bottom, #020917, #101725);
 }
 
