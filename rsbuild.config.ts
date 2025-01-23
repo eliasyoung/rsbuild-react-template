@@ -15,4 +15,7 @@ export default defineConfig({
       plugins: [TanStackRouterRspack()],
     },
   },
+  output: {
+    assetPrefix: '/rsbuild-react-template/',
+  },
 })
