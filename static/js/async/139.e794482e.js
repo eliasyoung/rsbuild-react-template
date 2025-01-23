@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkrsbuild_react_template=self.webpackChunkrsbuild_react_template||[]).push([["139"],{886:function(e,t,c){c.r(t),c.d(t,{Route:()=>n});var l=c(773);let n=(0,c(212).k0)("/")({component:function(){return(0,l.jsx)("div",{className:"p-2",children:(0,l.jsx)("h3",{children:"Welcome Home!"})})}})}}]);

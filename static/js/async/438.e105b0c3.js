@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkrsbuild_react_template=self.webpackChunkrsbuild_react_template||[]).push([["438"],{673:function(e,t,u){u.r(t),u.d(t,{Route:()=>r});var l=u(773);let r=(0,u(212).k0)("/about")({component:function(){return(0,l.jsx)("div",{className:"p-2",children:"Hello from About!"})}})}}]);
