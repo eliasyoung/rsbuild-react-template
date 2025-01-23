@@ -13,6 +13,7 @@
     "@fontsource-variable/inter": "^5.1.1",
     "@fontsource-variable/source-serif-4": "^5.1.1",
     "@tailwindcss/postcss": "^4.0.0",
+    "@tanstack/react-router": "^1.97.14",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tailwindcss": "^4.0.0"
@@ -22,6 +23,8 @@
     "@rsbuild/core": "^1.2.1",
     "@rsbuild/plugin-react": "^1.1.0",
     "@rsbuild/plugin-svgr": "^1.0.6",
+    "@tanstack/router-devtools": "^1.97.14",
+    "@tanstack/router-plugin": "^1.97.14",
     "@types/node": "^22.10.9",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
