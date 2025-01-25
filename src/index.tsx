@@ -1,3 +1,5 @@
+import { scan } from 'react-scan'
+
 import { StrictMode, Suspense } from 'react'
 import ReactDOM from 'react-dom/client'
 import { RouterProvider, createRouter } from '@tanstack/react-router'
@@ -9,6 +11,14 @@ import '@fontsource-variable/source-serif-4'
 import { routeTree } from './routeTree.gen'
 
 import { TanStackRouterDevtools } from '@/components/tanstack-router-devtool'
+
+// Enable React Scan in Development
+if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
+  scan({
+    enabled: true,
+    log: true, // logs render info to console (default: false)
+  })
+}
 
 // Create a new router instance
 const router = createRouter({ routeTree })

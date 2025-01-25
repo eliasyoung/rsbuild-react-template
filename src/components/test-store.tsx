@@ -2,7 +2,7 @@ import React from 'react'
 import { useBearStore } from '@/store'
 import { useShallow } from 'zustand/shallow'
 
-const TestStore = React.memo(() => {
+const TestStoreButton = React.memo(() => {
   const { increase } = useBearStore(
     useShallow((state) => ({ increase: state.increase })),
   )
@@ -12,14 +12,20 @@ const TestStore = React.memo(() => {
   }
 
   return (
-    <div>
-      <button type='button' onClick={onIncreaseClick}>
-        Click me to add num
-      </button>
-    </div>
+    <button type='button' onClick={onIncreaseClick}>
+      Click me to add num
+    </button>
   )
 })
 
-TestStore.displayName = 'TestStore'
+TestStoreButton.displayName = 'TestStoreButton'
 
-export default TestStore
+const TestStoreNumbers = React.memo(() => {
+  const bears = useBearStore((state) => state.bears)
+
+  return <p>{bears}</p>
+})
+
+TestStoreNumbers.displayName = 'TestStoreNumbers'
+
+export { TestStoreButton, TestStoreNumbers }
