@@ -2,6 +2,16 @@
 
 @theme {
   --font-display: "Source Serif 4 Variable", "sans-serif";
+  --color-primary: var(--theme-color-primary);
+}
+
+@layer base {
+  :root {
+    --theme-color-primary: #ffffff;
+  }
+  [data-theme="dark"] {
+    --theme-color-primary: #000000;
+  }
 }
 
 body {
