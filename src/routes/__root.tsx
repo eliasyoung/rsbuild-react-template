@@ -1,4 +1,5 @@
 import { createRootRoute, Link, Outlet } from '@tanstack/react-router'
+import { ThemeToogle } from '@/features/theme-toggle/components/theme-toggle'
 
 export const Route = createRootRoute({
   component: () => (
@@ -10,6 +11,7 @@ export const Route = createRootRoute({
         <Link to='/about' className='[&.active]:font-bold'>
           About
         </Link>
+        <ThemeToogle />
       </div>
       <hr />
       <Outlet />

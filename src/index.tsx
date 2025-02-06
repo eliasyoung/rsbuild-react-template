@@ -7,6 +7,8 @@ import { RouterProvider, createRouter } from '@tanstack/react-router'
 import '@fontsource-variable/inter'
 import '@fontsource-variable/source-serif-4'
 
+import './App.css'
+
 // Import the generated route tree
 import { routeTree } from './routeTree.gen'
 
