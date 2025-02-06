@@ -6,6 +6,7 @@ React SPA project template build with:
 - zustand5
 - react-i18next/i18next
 - tanstack/react-router
+- rsbuild
 
 ## Setup
 
