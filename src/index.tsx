@@ -14,6 +14,8 @@ import { routeTree } from './routeTree.gen'
 
 import { TanStackRouterDevtools } from '@/components/tanstack-router-devtool'
 
+import '@/features/i18n'
+
 // Enable React Scan in Development
 if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
   scan({
