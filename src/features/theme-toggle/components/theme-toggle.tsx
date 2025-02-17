@@ -1,5 +1,6 @@
 import { useTheme } from '../hooks'
-import { ThemeOptions } from '../@types'
+import type { ThemeOptions } from '../@types'
+import { THEME_OPTIONS } from '../constants'
 
 export const ThemeToogle = () => {
   const { theme, setTheme } = useTheme()
@@ -9,16 +10,30 @@ export const ThemeToogle = () => {
     setTheme(targetTheme)
   }
 
+  // return (
+  //   <button
+  //     type='button'
+  //     onClick={() => {
+  //       applyThemeChange(
+  //         theme === ThemeOptions.LIGHT ? ThemeOptions.DARK : ThemeOptions.LIGHT,
+  //       )
+  //     }}
+  //   >
+  //     {theme === ThemeOptions.LIGHT ? 'Light' : 'Dark'}
+  //   </button>
+  // )
   return (
     <button
       type='button'
       onClick={() => {
         applyThemeChange(
-          theme === ThemeOptions.LIGHT ? ThemeOptions.DARK : ThemeOptions.LIGHT,
+          theme === THEME_OPTIONS.LIGHT
+            ? THEME_OPTIONS.DARK
+            : THEME_OPTIONS.LIGHT,
         )
       }}
     >
-      {theme === ThemeOptions.LIGHT ? 'Light' : 'Dark'}
+      {theme === THEME_OPTIONS.LIGHT ? 'Light' : 'Dark'}
     </button>
   )
 }

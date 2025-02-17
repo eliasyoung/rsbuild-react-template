@@ -1,7 +1,8 @@
 import { useThemeStore } from '../stores'
 import { useEffect } from 'react'
 import { useShallow } from 'zustand/react/shallow'
-import { ThemeOptions } from '../@types'
+// import { ThemeOptions } from '../@types'
+import { THEME_OPTIONS } from '../constants'
 
 export const useTheme = () => {
   const { theme, setTheme } = useThemeStore(
@@ -11,14 +12,17 @@ export const useTheme = () => {
   useEffect(() => {
     const root = window.document.documentElement
 
-    root.classList.remove('light', 'dark')
+    root.classList.remove(...Object.values(THEME_OPTIONS))
     root.removeAttribute('data-theme')
 
-    if (theme === ThemeOptions.SYSTEM) {
+    // if (theme === ThemeOptions.SYSTEM) {
+    if (theme === THEME_OPTIONS.SYSTEM) {
       const systemTheme = window.matchMedia('(prefers-color-scheme: dark)')
         .matches
-        ? 'dark'
-        : 'light'
+        ? THEME_OPTIONS.DARK
+        : THEME_OPTIONS.LIGHT
+      // ? 'dark'
+      // : 'light'
 
       root.classList.add(systemTheme)
       root.setAttribute('data-theme', systemTheme)
